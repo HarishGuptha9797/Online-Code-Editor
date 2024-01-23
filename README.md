@@ -1,4 +1,4 @@
-# Code-Editor-HTML-CSS-JS
+# Online Code Editor
 
 # Features
 The editor supports HTML, CSS, and JavaScript, allowing users to write code for different aspects of web development.
