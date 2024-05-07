@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Online Code Editor</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://kit.fontawesome.com/a80de27572.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        
+        <div class="top">
+            <Editor />
+        </div>
+        <div class="bottom">
+            <iframe 
+                title="output"
+                sandbox="allow-scripts"
+                frameBorder="0";
+                width="100%";
+                height="100%";
+            ></iframe>
+        </div>
+
+        <script>
+            function run()
+            {
+                let htmlCode=document.getElementById("html-code").value;
+                let cssCode=document.getElementById("css-code").value;
+                let jsCode=document.getElementById("js-code").value;
+                let output=document.getElementById("output");
+
+                output.contentDocument.body.innerHTML = htmlCode +"<style>" + cssCode + '</style>';
+                output.contentWindow.eval(jsCode);
+            }
+        </script>
+    </body>
+</html>
